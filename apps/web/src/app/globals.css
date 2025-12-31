@@ -147,6 +147,26 @@ main {
   overflow-wrap: anywhere;
 }
 
+.note-list {
+  display: grid;
+  gap: 12px;
+}
+
+.note-card {
+  border: 1px solid var(--border);
+  background: #f6f8fb;
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.note-card pre {
+  margin: 0;
+  white-space: pre-wrap;
+  font-family: "Figtree", "Space Grotesk", "Segoe UI", sans-serif;
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+
 .status {
   font-size: 0.92rem;
   color: var(--muted);

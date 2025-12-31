@@ -1,0 +1,287 @@
+{
+    "objectId": "FA163EB2BF9C1FD0B9A3752B04D39D74",
+    "references": {
+        "d": {
+            "results": [
+                {
+                    "__metadata": {
+                        "uri": "https://my300375.c4c.saphybriscloud.cn/sap/c4c/odata/v1/c4codataapi/ServiceRequestBusinessTransactionDocumentReferenceCollection('FA163E8749F01FD0B9A37D4635E7A473')",
+                        "type": "c4codata.ServiceRequestBusinessTransactionDocumentReference",
+                        "etag": "W/\"datetimeoffset'2025-12-30T01%3A36%3A47.9842130Z'\""
+                    },
+                    "ObjectID": "FA163E8749F01FD0B9A37D4635E7A473",
+                    "ParentObjectID": "FA163EB2BF9C1FD0B9A3752B04D39D74",
+                    "TypeCode": "542",
+                    "TypeCodeText": "Activity Task",
+                    "RoleCode": "2",
+                    "RoleCodeText": "Successor",
+                    "ID": "31549",
+                    "BusinessSystemID": "",
+                    "ETag": "/Date(1767058607984)/",
+                    "UUID": "FA163E87-49F0-1FD0-B9A3-7D3B8B46A473",
+                    "ItemUUID": null,
+                    "ItemTypeCode": "",
+                    "ItemTypeCodeText": "",
+                    "ItemID": "",
+                    "ServiceRequest": {
+                        "__deferred": {
+                            "uri": "https://my300375.c4c.saphybriscloud.cn/sap/c4c/odata/v1/c4codataapi/ServiceRequestBusinessTransactionDocumentReferenceCollection('FA163E8749F01FD0B9A37D4635E7A473')/ServiceRequest"
+                        }
+                    }
+                },
+                {
+                    "__metadata": {
+                        "uri": "https://my300375.c4c.saphybriscloud.cn/sap/c4c/odata/v1/c4codataapi/ServiceRequestBusinessTransactionDocumentReferenceCollection('FA163E8749F01FD0B9A37D4635E7E473')",
+                        "type": "c4codata.ServiceRequestBusinessTransactionDocumentReference",
+                        "etag": "W/\"datetimeoffset'2025-12-30T01%3A36%3A47.9842130Z'\""
+                    },
+                    "ObjectID": "FA163E8749F01FD0B9A37D4635E7E473",
+                    "ParentObjectID": "FA163EB2BF9C1FD0B9A3752B04D39D74",
+                    "TypeCode": "542",
+                    "TypeCodeText": "Activity Task",
+                    "RoleCode": "2",
+                    "RoleCodeText": "Successor",
+                    "ID": "31550",
+                    "BusinessSystemID": "",
+                    "ETag": "/Date(1767058607984)/",
+                    "UUID": "FA163E87-49F0-1FD0-B9A3-7D4635E66473",
+                    "ItemUUID": null,
+                    "ItemTypeCode": "",
+                    "ItemTypeCodeText": "",
+                    "ItemID": "",
+                    "ServiceRequest": {
+                        "__deferred": {
+                            "uri": "https://my300375.c4c.saphybriscloud.cn/sap/c4c/odata/v1/c4codataapi/ServiceRequestBusinessTransactionDocumentReferenceCollection('FA163E8749F01FD0B9A37D4635E7E473')/ServiceRequest"
+                        }
+                    }
+                },
+                {
+                    "__metadata": {
+                        "uri": "https://my300375.c4c.saphybriscloud.cn/sap/c4c/odata/v1/c4codataapi/ServiceRequestBusinessTransactionDocumentReferenceCollection('FA163E8749F01FD0B9A3FFD247B62480')",
+                        "type": "c4codata.ServiceRequestBusinessTransactionDocumentReference",
+                        "etag": "W/\"datetimeoffset'2025-12-30T01%3A36%3A47.9842130Z'\""
+                    },
+                    "ObjectID": "FA163E8749F01FD0B9A3FFD247B62480",
+                    "ParentObjectID": "FA163EB2BF9C1FD0B9A3752B04D39D74",
+                    "TypeCode": "39",
+                    "TypeCodeText": "E-Mail",
+                    "RoleCode": "2",
+                    "RoleCodeText": "Successor",
+                    "ID": "280630",
+                    "BusinessSystemID": "",
+                    "ETag": "/Date(1767058607984)/",
+                    "UUID": "FA163E87-49F0-1FD0-B9A3-FFC686F6C480",
+                    "ItemUUID": null,
+                    "ItemTypeCode": "",
+                    "ItemTypeCodeText": "",
+                    "ItemID": "",
+                    "ServiceRequest": {
+                        "__deferred": {
+                            "uri": "https://my300375.c4c.saphybriscloud.cn/sap/c4c/odata/v1/c4codataapi/ServiceRequestBusinessTransactionDocumentReferenceCollection('FA163E8749F01FD0B9A3FFD247B62480')/ServiceRequest"
+                        }
+                    }
+                },
+                {
+                    "__metadata": {
+                        "uri": "https://my300375.c4c.saphybriscloud.cn/sap/c4c/odata/v1/c4codataapi/ServiceRequestBusinessTransactionDocumentReferenceCollection('FA163EB2BF9C1FD0B9A3752B04D31D74')",
+                        "type": "c4codata.ServiceRequestBusinessTransactionDocumentReference",
+                        "etag": "W/\"datetimeoffset'2025-12-30T01%3A36%3A47.9842130Z'\""
+                    },
+                    "ObjectID": "FA163EB2BF9C1FD0B9A3752B04D31D74",
+                    "ParentObjectID": "FA163EB2BF9C1FD0B9A3752B04D39D74",
+                    "TypeCode": "118",
+                    "TypeCodeText": "Ticket",
+                    "RoleCode": "13",
+                    "RoleCodeText": "Parent",
+                    "ID": "22502",
+                    "BusinessSystemID": "",
+                    "ETag": "/Date(1767058607984)/",
+                    "UUID": "FA163E87-49F0-1FE0-978D-D1FAF55D098D",
+                    "ItemUUID": null,
+                    "ItemTypeCode": "",
+                    "ItemTypeCodeText": "",
+                    "ItemID": "",
+                    "ServiceRequest": {
+                        "__deferred": {
+                            "uri": "https://my300375.c4c.saphybriscloud.cn/sap/c4c/odata/v1/c4codataapi/ServiceRequestBusinessTransactionDocumentReferenceCollection('FA163EB2BF9C1FD0B9A3752B04D31D74')/ServiceRequest"
+                        }
+                    }
+                },
+                {
+                    "__metadata": {
+                        "uri": "https://my300375.c4c.saphybriscloud.cn/sap/c4c/odata/v1/c4codataapi/ServiceRequestBusinessTransactionDocumentReferenceCollection('FA163EB2BF9C1FD0B9A37CD666AD1D78')",
+                        "type": "c4codata.ServiceRequestBusinessTransactionDocumentReference",
+                        "etag": "W/\"datetimeoffset'2025-12-30T01%3A36%3A47.9842130Z'\""
+                    },
+                    "ObjectID": "FA163EB2BF9C1FD0B9A37CD666AD1D78",
+                    "ParentObjectID": "FA163EB2BF9C1FD0B9A3752B04D39D74",
+                    "TypeCode": "12",
+                    "TypeCodeText": "Appointment",
+                    "RoleCode": "2",
+                    "RoleCodeText": "Successor",
+                    "ID": "37023",
+                    "BusinessSystemID": "",
+                    "ETag": "/Date(1767058607984)/",
+                    "UUID": "FA163EB2-BF9C-1FD0-B9A3-7CD666A93D78",
+                    "ItemUUID": null,
+                    "ItemTypeCode": "",
+                    "ItemTypeCodeText": "",
+                    "ItemID": "",
+                    "ServiceRequest": {
+                        "__deferred": {
+                            "uri": "https://my300375.c4c.saphybriscloud.cn/sap/c4c/odata/v1/c4codataapi/ServiceRequestBusinessTransactionDocumentReferenceCollection('FA163EB2BF9C1FD0B9A37CD666AD1D78')/ServiceRequest"
+                        }
+                    }
+                },
+                {
+                    "__metadata": {
+                        "uri": "https://my300375.c4c.saphybriscloud.cn/sap/c4c/odata/v1/c4codataapi/ServiceRequestBusinessTransactionDocumentReferenceCollection('FA163EB2BF9C1FD0B9A383EA283ABD78')",
+                        "type": "c4codata.ServiceRequestBusinessTransactionDocumentReference",
+                        "etag": "W/\"datetimeoffset'2025-12-30T01%3A36%3A47.9842130Z'\""
+                    },
+                    "ObjectID": "FA163EB2BF9C1FD0B9A383EA283ABD78",
+                    "ParentObjectID": "FA163EB2BF9C1FD0B9A3752B04D39D74",
+                    "TypeCode": "39",
+                    "TypeCodeText": "E-Mail",
+                    "RoleCode": "2",
+                    "RoleCodeText": "Successor",
+                    "ID": "280539",
+                    "BusinessSystemID": "",
+                    "ETag": "/Date(1767058607984)/",
+                    "UUID": "FA163EB2-BF9C-1FD0-B9A3-83EA28395D78",
+                    "ItemUUID": null,
+                    "ItemTypeCode": "",
+                    "ItemTypeCodeText": "",
+                    "ItemID": "",
+                    "ServiceRequest": {
+                        "__deferred": {
+                            "uri": "https://my300375.c4c.saphybriscloud.cn/sap/c4c/odata/v1/c4codataapi/ServiceRequestBusinessTransactionDocumentReferenceCollection('FA163EB2BF9C1FD0B9A383EA283ABD78')/ServiceRequest"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "emailNotes": {
+        "d": {
+            "results": [
+                {
+                    "__metadata": {
+                        "uri": "https://my300375.c4c.saphybriscloud.cn/sap/c4c/odata/v1/c4codataapi/EMailCollection('FA163EB2BF9C1FD0B9A383EA28395D78')",
+                        "type": "c4codata.EMail",
+                        "etag": "W/\"datetimeoffset'2025-12-30T01%3A09%3A00.0253240Z'\""
+                    },
+                    "ObjectID": "FA163EB2BF9C1FD0B9A383EA28395D78",
+                    "ID": "280539",
+                    "Subject": "[ Ticket: 29444 ] NEWCASTLE RVSUPERCENTRE LRT230378",
+                    "Status": "3",
+                    "StatusText": "Completed",
+                    "Category": "0004",
+                    "CategoryText": "Business E-Mail",
+                    "PriorityCode": "3",
+                    "PriorityCodeText": "Normal",
+                    "DateTime": "/Date(1767056939905)/",
+                    "DateTimetimeZoneCode": "AUSACT",
+                    "DateTimetimeZoneCodeText": "Australia Capital Territories",
+                    "TransmissionStatusCode": "2",
+                    "TransmissionStatusCodeText": "Sent",
+                    "OwnerPartyID": "8000000012",
+                    "Account": null,
+                    "MainAccountPartyID": "",
+                    "PrimaryContact": null,
+                    "MainContactPartyID": "",
+                    "Direction": "3",
+                    "DirectionText": "Outbound",
+                    "SalesTerritoryID": "",
+                    "SalesTerritoryName": "",
+                    "Campaign": null,
+                    "ResponseOption": "",
+                    "SentimentTypeCode": "",
+                    "SentimentTypeCodeText": "",
+                    "DocumentType": "0004",
+                    "DocumentTypeText": "E-Mail",
+                    "TicketID": "29444",
+                    "EntityLastChangedOn": "/Date(1767056940025)/",
+                    "ETag": "/Date(1767056940025)/",
+                    "DataOriginTypeCode": "1",
+                    "DataOriginTypeCodeText": "Manual Data Entry",
+                    "AccountName": "",
+                    "GroupwareItemID": "",
+                    "MessageFromEmailURI": "onlinewarranty@regentrv.com.au",
+                    "MessageFromName": "Regent Warranty",
+                    "MessageFromPartyID": "8000000701",
+                    "MessageFromPartyName": "Regent Warranty",
+                    "MessageFromPartyUUID": "9101E6C0-95C5-1EEE-99CA-0BC64EC79C14",
+                    "OwnerName": "Callum Langmaid",
+                    "OwnerUUID": "BFB4DEA1-7979-1EDE-90FA-753A37080C57",
+                    "PrimaryContactName": "",
+                    "UUID": "FA163EB2-BF9C-1FD0-B9A3-83EA28395D78",
+                    "LastChangeDateTime": "/Date(1767056940025)/",
+                    "CreatedBySSI": "",
+                    "CreatedBySSIText": "",
+                    "UpdateFlag_SDK": false,
+                    "EMailAttachments": {
+                        "__deferred": {
+                            "uri": "https://my300375.c4c.saphybriscloud.cn/sap/c4c/odata/v1/c4codataapi/EMailCollection('FA163EB2BF9C1FD0B9A383EA28395D78')/EMailAttachments"
+                        }
+                    },
+                    "EMailBTDReference": {
+                        "__deferred": {
+                            "uri": "https://my300375.c4c.saphybriscloud.cn/sap/c4c/odata/v1/c4codataapi/EMailCollection('FA163EB2BF9C1FD0B9A383EA28395D78')/EMailBTDReference"
+                        }
+                    },
+                    "EMailCcRecipients": {
+                        "__deferred": {
+                            "uri": "https://my300375.c4c.saphybriscloud.cn/sap/c4c/odata/v1/c4codataapi/EMailCollection('FA163EB2BF9C1FD0B9A383EA28395D78')/EMailCcRecipients"
+                        }
+                    },
+                    "EMailInvolvedParties": {
+                        "__deferred": {
+                            "uri": "https://my300375.c4c.saphybriscloud.cn/sap/c4c/odata/v1/c4codataapi/EMailCollection('FA163EB2BF9C1FD0B9A383EA28395D78')/EMailInvolvedParties"
+                        }
+                    },
+                    "EMailNotes": [
+                        {
+                            "__metadata": {
+                                "uri": "https://my300375.c4c.saphybriscloud.cn/sap/c4c/odata/v1/c4codataapi/EMailNotesCollection('FA163EB2BF9C1FD0B9A383EA28399D78')",
+                                "type": "c4codata.EMailNotes",
+                                "etag": "W/\"datetimeoffset'2025-12-30T01%3A09%3A00.0253240Z'\""
+                            },
+                            "ObjectID": "FA163EB2BF9C1FD0B9A383EA28399D78",
+                            "ParentObjectID": "FA163EB2BF9C1FD0B9A383EA28395D78",
+                            "EMailID": "280539",
+                            "Text": "<p style=\"font-family: 'arial,helvetica,sans-serif'; font-size: 12pt;\">&nbsp;</p>\n<p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"cid:CID_20251230_010859_1\" alt=\"Regent Warranty Claim Update \" width=\"774\" height=\"145\" /></p>\n<p><span style=\"font-size: 12pt; font-family: Arial, sans-serif;\"><span style=\"font-family: arial;\"><span style=\"font-size: 12pt;\">An approval number has been issued for<strong>&nbsp;</strong></span></span></span><span style=\"font-family: arial; font-size: 11pt;\"><span style=\"font-family: arial;\"><span style=\"font-size: 12pt;\"><strong>LRT230378</strong>.</span></span></span></p>\n<p><span style=\"font-family: arial; font-size: 11pt;\"><span style=\"font-family: arial;\"><span style=\"font-size: 12pt;\">&nbsp;</span></span></span></p>\n<p><span style=\"font-size: 12pt; font-family: arial;\">Please ensure you follow these steps while submitting the invoice:<br /></span></p>\n<p><span style=\"font-size: 12pt; font-family: arial;\">&nbsp; &nbsp; &nbsp; &nbsp;1. The invoice should be </span><span style=\"font-size: 12pt; font-family: arial; color: windowtext;\">itemised </span><span style=\"font-size: 12pt; font-family: arial;\">with labour and parts (where applicable).</span></p>\n<p><span style=\"font-family: arial; font-size: 12pt;\">&nbsp; &nbsp; &nbsp; &nbsp;2.&nbsp;</span><span style=\"font-size: 12pt; font-family: arial; color: windowtext;\">T</span><span style=\"font-size: 12pt; font-family: arial;\">he invoice value </span><span style=\"font-size: 12pt; font-family: arial; color: windowtext;\">must </span><span style=\"font-size: 12pt; font-family: arial;\">match the estimate (a</span><span style=\"font-size: 12pt; font-family: arial; color: windowtext;\">pproval must be sought for a supplementary before invoicing).</span></p>\n<p><span style=\"font-family: arial; font-size: 12pt;\">&nbsp; &nbsp; &nbsp; &nbsp;3.&nbsp;</span><span style=\"font-size: 12pt; font-family: arial; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;\">Please ensure that the invoice contains the correct business name and address as indicated below:</span></p>\n<p class=\"pb-2\" style=\"margin: 0cm 0cm 12.0pt 36.0pt;\"><span class=\"issue-underline\"><span style=\"font-size: 12pt; font-family: arial; color: black;\">Reg</span></span><span style=\"font-size: 12pt; font-family: arial; color: black;\">ent RV Pty Ltd</span></p>\n<p class=\"pb-2\" style=\"margin: 0cm 0cm 12.0pt 36.0pt;\"><span style=\"font-size: 12pt; font-family: arial; color: black;\">20-50 Fillo Drive</span></p>\n<p class=\"pb-2\" style=\"margin: 0cm 0cm 12.0pt 36.0pt;\"><span style=\"font-size: 12pt; font-family: arial; color: black;\">Somerton., VIC, 3062</span></p>\n<p><span style=\"font-family: arial; font-size: 12pt;\">&nbsp; &nbsp; &nbsp; &nbsp;4.&nbsp;</span><span style=\"font-size: 12pt; font-family: arial;\">Please ensure that the invoice contains the purchase order (approval) number and chassis number.</span></p>\n<p><span style=\"font-family: arial; font-size: 12pt;\">&nbsp; &nbsp; &nbsp; &nbsp;5.&nbsp;</span><span style=\"font-size: 12pt; font-family: arial;\">The invoice must be sent by replying to this email and&nbsp;CC </span><span style=\"font-size: 11pt; font-family: Calibri, sans-serif;\"><a href=\"mailto:admin@regentrv.com.au\"><span style=\"font-size: 12pt; font-family: arial;\">admin@regentrv.com.au</span></a>.</span></p>\n<p><span style=\"color: windowtext; font-size: 12pt; font-family: Arial, sans-serif;\">.</span><br /><br /><span style=\"font-family: arial; font-size: 12pt;\"><strong>Email associated with claim:</strong></span></p>\n<p><span style=\"font-family: arial;\"><span style=\"font-size: 12pt;\">Email associated&nbsp;with Claim :&nbsp;</span></span><span style=\"font-family: arial; font-size: 12pt;\">david.spring@bigpond.com</span><br /><span style=\"font-family: arial; font-size: 12pt;\">Mobile Phone:&nbsp;+61 414366149</span><br /><span style=\"font-family: arial; font-size: 12pt;\">Approval number: ​7000016108</span><br /><span style=\"font-family: arial; font-size: 12pt;\">Claim amount: $1,596.55<br /></span><br /><span style=\"font-family: arial; font-size: 12pt;\"><strong>Issues covered: </strong><br />Per quote sent through<br /></span><br /><span style=\"font-family: arial; font-size: 12pt;\"><strong>Parts ordered:&nbsp;</strong><br />Customer already has parts</span><br /><br /><span style=\"font-family: arial; font-size: 12pt;\"><strong>PARTS POSTAL ADDRESS</strong></span></p>\n<p><br /><span style=\"font-family: arial; font-size: 12pt;\">Parts Postal Address: N/A</span><br /><span style=\"font-family: arial; font-size: 12pt;\">​Parts Postal Suburb: N/A </span><br /><span style=\"font-family: arial; font-size: 12pt;\">Parts Postal State: ​N/A </span><br /><span style=\"font-family: arial; font-size: 12pt;\">Parts Postal Postcode: N/A ​</span><br /><span style=\"font-family: arial; font-size: 12pt;\">Parts Postal Country: N/A </span><br /><br /><span style=\"font-family: arial;\"><span style=\"font-size: 12pt;\"><span style=\"font-size: 1pt;\"><span style=\"font-size: 12pt;\"><span style=\"font-size: 11pt;\"><span style=\"font-size: 12pt;\">For all parts information and updates, please contact email&nbsp;<a href=\"mailto:parts@regentrv.com.au\">parts@regentrv.com.au</a>.</span></span></span></span></span></span></p>\n<p style=\"font-family: 'arial,helvetica,sans-serif'; font-size: 12pt;\">&nbsp;</p>\n<p><span style=\"font-size: 10pt; font-family: arial;\">&nbsp;</span></p>\n<p>&nbsp;</p>\n<div>\n<p><span style=\"font-family: arial; font-size: 11pt;\"><strong>Callum&nbsp;Langmaid</strong></span><br /><span style=\"color: #33475b; font-family: arial; font-size: 11pt;\">Warranty Support</span><br /><span style=\"font-family: arial; font-size: 14.6667px;\">20-50 Fillo Drive, Somerton, VIC 3062</span><br /><span style=\"font-family: arial;\"><span style=\"font-family: georgia;\"><span style=\"font-family: arial;\"><span style=\"font-size: 12pt;\"><span style=\"font-size: 11pt;\"><strong>T</strong>: (</span></span></span></span></span><span style=\"color: #33475b; font-family: 'Lexend Deca', Helvetica, Arial, sans-serif; font-size: 14px;\"><span style=\"font-family: arial;\"><span style=\"font-family: georgia;\"><span style=\"font-family: arial;\"><span style=\"font-size: 12pt;\"><span style=\"font-size: 11pt;\">03) 8314 3900</span></span></span></span></span></span><span style=\"font-family: arial;\"><span style=\"font-family: georgia;\"><span style=\"font-family: arial;\"><span style=\"font-size: 12pt;\"><span style=\"font-size: 11pt;\">&nbsp;<strong>E</strong>:&nbsp;<a href=\"mailto:onlinewarranty@regentrv.com.au\" target=\"_blank\" rel=\"noopener\">onlinewarranty@regentrv.com.au</a></span></span></span></span></span></p>\n<p><a href=\"http://www.regentcaravans.com.au/\" target=\"_blank\" rel=\"noopener\"><strong><span style=\"font-family: arial; font-size: 11pt;\">REGENT CARAVANS</span></strong></a><span style=\"font-family: arial; font-size: 12pt;\">&nbsp;</span><span class=\"text-only\" style=\"white-space: pre; font-family: arial; font-size: 12pt;\">| </span><a href=\"http://www.snowyrivercaravans.com.au/\" target=\"_blank\" rel=\"noopener\"><span style=\"font-family: arial; font-size: 11pt;\"><strong>SNOWY RIVER CARAVANS</strong></span></a>&nbsp;<span style=\"font-family: arial; font-size: 16px; white-space: pre;\">| </span><a href=\"http://www.newgencaravans.com.au/\" target=\"_blank\" rel=\"noopener\"><span style=\"font-family: arial; font-size: 11pt;\"><strong>NEWGEN CARAVANS</strong></span></a></p>\n<p><img src=\"cid:CID_20251230_010859_2\" /></p>\n<div data-lark-html-role=\"root\"><span class=\"text-only\" style=\"white-space: pre;\" data-eleid=\"3\">This email is only for use by the person or entity to who it is intended and may contain confidential or privileged information.</span> <span class=\"text-only\" style=\"white-space: pre;\" data-eleid=\"5\"><span class=\"text-only\">If you have received this email in error, you are not permitted to disseminate, copy, or use the information contained in it for any purpose, and we request that you notify us of our error </span><span class=\"text-only text-with-abbreviation text-with-abbreviation-bottomline windows-bottomline\">as soon as possible</span><span class=\"text-only\"> by return email.</span></span> <strong><span class=\"text-only\" style=\"white-space: pre;\" data-eleid=\"7\">Disclaimer: </span></strong><span class=\"text-only\" style=\"white-space: pre;\" data-eleid=\"8\">You are required to virus scan and otherwise test this email before loading it onto any computer or transmitting it over any network. We do not provide any warranty that this email is free from computer viruses, malware, defects, or errors.</span> <span class=\"text-only\" style=\"white-space: pre;\" data-eleid=\"10\">We are not liable for any loss or damage incurred by you or any other person because of the receipt or transmission of this email,or if liable our obligation is limited to retransmitting this email to the intended recipient.</span></div>\n<p><span style=\"font-family: arial; font-size: 10pt;\"><em>&nbsp;</em></span></p>\n<p>&nbsp;</p>\n</div>\n<p style=\"font-family: 'arial,helvetica,sans-serif'; font-size: 12pt;\">&nbsp;</p>",
+                            "TypeCode": "10002",
+                            "TypeCodeText": "Body Text",
+                            "AuthorName": "",
+                            "AuthorUUID": null,
+                            "CreatedOn": "/Date(1767056940025)/",
+                            "CreatedBy": "Callum Langmaid",
+                            "UpdatedOn": "/Date(1767056940025)/",
+                            "LastUpdatedBy": "Callum Langmaid",
+                            "ETag": "/Date(1767056940025)/",
+                            "LanguageCode": "",
+                            "LanguageCodeText": "",
+                            "EntityLastChangedOn": "/Date(1767056940025)/",
+                            "EMail": {
+                                "__deferred": {
+                                    "uri": "https://my300375.c4c.saphybriscloud.cn/sap/c4c/odata/v1/c4codataapi/EMailNotesCollection('FA163EB2BF9C1FD0B9A383EA28399D78')/EMail"
+                                }
+                            }
+                        }
+                    ],
+                    "EMailSenderParty": {
+                        "__deferred": {
+                            "uri": "https://my300375.c4c.saphybriscloud.cn/sap/c4c/odata/v1/c4codataapi/EMailCollection('FA163EB2BF9C1FD0B9A383EA28395D78')/EMailSenderParty"
+                        }
+                    },
+                    "EMailToRecipients": {
+                        "__deferred": {
+                            "uri": "https://my300375.c4c.saphybriscloud.cn/sap/c4c/odata/v1/c4codataapi/EMailCollection('FA163EB2BF9C1FD0B9A383EA28395D78')/EMailToRecipients"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

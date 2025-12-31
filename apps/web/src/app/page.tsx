@@ -10,6 +10,11 @@ type ResultState = {
 
 const apiBase = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:4000";
 
+type EmailNote = {
+  html: string;
+  text: string;
+};
+
 function extractReferenceIds(data: unknown): string[] {
   if (!data || typeof data !== "object") {
     return [];
@@ -25,6 +30,57 @@ function extractReferenceIds(data: unknown): string[] {
     .map((result) => (typeof result?.ID === "string" ? result.ID : null))
     .filter((id): id is string => Boolean(id));
   return Array.from(new Set(ids));
+}
+
+function extractEmailNoteHtml(data: unknown): string[] {
+  if (!data || typeof data !== "object") {
+    return [];
+  }
+  const emailNotes = (data as { emailNotes?: unknown }).emailNotes as {
+    d?: {
+      results?: Array<{
+        EMailNotes?: Array<{ Text?: unknown }>;
+      }>;
+    };
+  } | null;
+  const results = emailNotes?.d?.results;
+  if (!Array.isArray(results)) {
+    return [];
+  }
+  const htmlNotes: string[] = [];
+  results.forEach((result) => {
+    const notes = result?.EMailNotes;
+    if (!Array.isArray(notes)) {
+      return;
+    }
+    notes.forEach((note) => {
+      if (typeof note?.Text === "string" && note.Text.trim()) {
+        htmlNotes.push(note.Text);
+      }
+    });
+  });
+  return htmlNotes;
+}
+
+function formatEmailHtml(html: string): string {
+  if (!html) {
+    return "";
+  }
+  const normalized = html
+    .replace(/<\s*br\s*\/?>/gi, "\n")
+    .replace(/<\/p\s*>/gi, "\n\n")
+    .replace(/<p[^>]*>/gi, "")
+    .replace(/<\/div\s*>/gi, "\n")
+    .replace(/<div[^>]*>/gi, "");
+
+  if (typeof window === "undefined" || !("DOMParser" in window)) {
+    return normalized.replace(/<[^>]+>/g, "").trim();
+  }
+
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(normalized, "text/html");
+  const text = doc.body.textContent || "";
+  return text.replace(/\n{3,}/g, "\n\n").trim();
 }
 
 function downloadJson(data: unknown, filename: string) {
@@ -113,6 +169,14 @@ export default function Home() {
   const memoReferenceIds = useMemo(
     () => extractReferenceIds(memoState.data),
     [memoState.data]
+  );
+  const formattedEmailNotes = useMemo<EmailNote[]>(
+    () =>
+      extractEmailNoteHtml(emailState.data).map((html) => ({
+        html,
+        text: formatEmailHtml(html)
+      })),
+    [emailState.data]
   );
 
   async function runRequest(
@@ -319,6 +383,16 @@ export default function Home() {
           state={emailState}
           filename={`email-notes-${ticketId || "ticket"}.json`}
         />
+        {emailState.status === "success" && formattedEmailNotes.length > 0 ? (
+          <div className="note-list">
+            <p className="status">Formatted EMailNotes.Text content:</p>
+            {formattedEmailNotes.map((note, index) => (
+              <div className="note-card" key={`${index}-${note.text.length}`}>
+                <pre>{note.text}</pre>
+              </div>
+            ))}
+          </div>
+        ) : null}
       </section>
     </main>
   );
