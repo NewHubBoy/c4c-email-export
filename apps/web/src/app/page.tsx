@@ -134,10 +134,7 @@ function ResultBlock({
 }
 
 export default function Home() {
-  const [tenantUrl, setTenantUrl] = useState("");
   const [ticketId, setTicketId] = useState("");
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
   const [emailActivityId, setEmailActivityId] = useState("");
 
   const [textState, setTextState] = useState<ResultState>({
@@ -152,19 +149,12 @@ export default function Home() {
 
   const basePayload = useMemo(
     () => ({
-      tenantUrl: tenantUrl.trim(),
-      ticketId: ticketId.trim(),
-      username: username.trim(),
-      password
+      ticketId: ticketId.trim()
     }),
-    [tenantUrl, ticketId, username, password]
+    [ticketId]
   );
 
-  const canRun =
-    basePayload.tenantUrl &&
-    basePayload.ticketId &&
-    basePayload.username &&
-    basePayload.password;
+  const canRun = Boolean(basePayload.ticketId);
 
   const memoReferenceIds = useMemo(
     () => extractReferenceIds(memoState.data),
@@ -214,26 +204,20 @@ export default function Home() {
         <h1>C4C Text Explorer</h1>
         <p>
           Fetch service request text collections, internal memos, and e-mail
-          notes with Basic Auth. Results are returned as JSON with one-click
-          export.
+          notes with server-side Basic Auth. Results are returned as JSON with
+          one-click export.
         </p>
       </section>
 
       <section className="panel">
         <div className="panel-header">
-          <h2>Connection Details</h2>
-          <p>Use the tenant base URL and credentials for C4C OData access.</p>
+          <h2>Ticket Input</h2>
+          <p>
+            C4C_TENANT_URL, C4C_USERNAME, and C4C_PASSWORD are loaded from the
+            API .env file.
+          </p>
         </div>
         <div className="form-grid">
-          <div className="field">
-            <label htmlFor="tenantUrl">Tenant URL</label>
-            <input
-              id="tenantUrl"
-              placeholder="https://your-tenant.example.com"
-              value={tenantUrl}
-              onChange={(event) => setTenantUrl(event.target.value)}
-            />
-          </div>
           <div className="field">
             <label htmlFor="ticketId">Ticket ID</label>
             <input
@@ -241,25 +225,6 @@ export default function Home() {
               placeholder="XYZ"
               value={ticketId}
               onChange={(event) => setTicketId(event.target.value)}
-            />
-          </div>
-          <div className="field">
-            <label htmlFor="username">Username</label>
-            <input
-              id="username"
-              placeholder="user@example.com"
-              value={username}
-              onChange={(event) => setUsername(event.target.value)}
-            />
-          </div>
-          <div className="field">
-            <label htmlFor="password">Password</label>
-            <input
-              id="password"
-              type="password"
-              placeholder="Basic Auth password"
-              value={password}
-              onChange={(event) => setPassword(event.target.value)}
             />
           </div>
         </div>

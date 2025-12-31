@@ -1,4 +1,5 @@
 import { Body, Controller, Get, Post } from "@nestjs/common";
+import { ensureEnvLoaded } from "../env";
 import { C4cBaseRequest, EmailNotesRequest } from "../dto/c4c.dto";
 import { C4cService } from "../services/c4c.service";
 
@@ -8,7 +9,14 @@ export class C4cController {
 
   @Get("health")
   health() {
-    return { status: "ok" };
+    ensureEnvLoaded();
+    return {
+      status: "ok",
+      tenantConfigured: Boolean(process.env.C4C_TENANT_URL),
+      authConfigured: Boolean(
+        process.env.C4C_USERNAME && process.env.C4C_PASSWORD
+      )
+    };
   }
 
   @Post("service-request-texts")

@@ -4,6 +4,7 @@ import {
   Injectable,
   NotFoundException
 } from "@nestjs/common";
+import { ensureEnvLoaded } from "../env";
 
 type ODataCollection<T> = {
   d?: {
@@ -13,12 +14,17 @@ type ODataCollection<T> = {
 
 @Injectable()
 export class C4cService {
-  private normalizeTenantUrl(tenantUrl: string) {
-    if (!tenantUrl?.trim()) {
-      throw new BadRequestException("tenantUrl is required.");
+  private resolveTenantUrl(tenantUrl?: string) {
+    ensureEnvLoaded();
+    const resolvedTenantUrl =
+      tenantUrl?.trim() || process.env.C4C_TENANT_URL;
+    if (!resolvedTenantUrl) {
+      throw new BadRequestException(
+        "tenantUrl is required (set C4C_TENANT_URL or provide tenantUrl)."
+      );
     }
     try {
-      const url = new URL(tenantUrl.trim());
+      const url = new URL(resolvedTenantUrl);
       return url.origin;
     } catch (error) {
       throw new BadRequestException("tenantUrl must be a valid URL.");
@@ -26,6 +32,7 @@ export class C4cService {
   }
 
   private buildAuthHeader(username?: string, password?: string) {
+    ensureEnvLoaded();
     const resolvedUsername = username || process.env.C4C_USERNAME;
     const resolvedPassword = password || process.env.C4C_PASSWORD;
     if (!resolvedUsername || !resolvedPassword) {
@@ -44,11 +51,11 @@ export class C4cService {
   }
 
   private buildUrl(
-    tenantUrl: string,
+    tenantUrl: string | undefined,
     path: string,
     params: Record<string, string>
   ) {
-    const baseUrl = this.normalizeTenantUrl(tenantUrl);
+    const baseUrl = this.resolveTenantUrl(tenantUrl);
     const url = new URL(path, baseUrl);
     Object.entries(params).forEach(([key, value]) => {
       url.searchParams.set(key, value);
@@ -57,7 +64,7 @@ export class C4cService {
   }
 
   private async request<T>(
-    tenantUrl: string,
+    tenantUrl: string | undefined,
     path: string,
     params: Record<string, string>,
     authHeader: string
@@ -85,7 +92,7 @@ export class C4cService {
   }
 
   private async getServiceRequestObjectId(
-    tenantUrl: string,
+    tenantUrl: string | undefined,
     ticketId: string,
     authHeader: string
   ) {
@@ -111,7 +118,7 @@ export class C4cService {
   }
 
   async getServiceRequestTexts(
-    tenantUrl: string,
+    tenantUrl: string | undefined,
     ticketId: string,
     username?: string,
     password?: string
@@ -140,7 +147,7 @@ export class C4cService {
   }
 
   async getInternalMemos(
-    tenantUrl: string,
+    tenantUrl: string | undefined,
     ticketId: string,
     username?: string,
     password?: string
@@ -194,7 +201,7 @@ export class C4cService {
   }
 
   async getEmailNotes(
-    tenantUrl: string,
+    tenantUrl: string | undefined,
     ticketId: string,
     emailActivityId: string | undefined,
     username?: string,

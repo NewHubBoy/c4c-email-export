@@ -1,5 +1,5 @@
 export type C4cBaseRequest = {
-  tenantUrl: string;
+  tenantUrl?: string;
   ticketId: string;
   username?: string;
   password?: string;
