@@ -1,0 +1,73 @@
+{
+    "objectId": "FA163EB2BF9C1FD0B9A3752B04D39D74",
+    "references": {
+        "d": {
+            "results": [
+                {
+                    "__metadata": {
+                        "uri": "https://my300375.c4c.saphybriscloud.cn/sap/c4c/odata/v1/c4codataapi/ServiceRequestBusinessTransactionDocumentReferenceCollection('FA163E8749F01FD0B9A3FFD247B62480')",
+                        "type": "c4codata.ServiceRequestBusinessTransactionDocumentReference",
+                        "etag": "W/\"datetimeoffset'2025-12-30T01%3A36%3A47.9842130Z'\""
+                    },
+                    "ObjectID": "FA163E8749F01FD0B9A3FFD247B62480",
+                    "ParentObjectID": "FA163EB2BF9C1FD0B9A3752B04D39D74",
+                    "TypeCode": "39",
+                    "TypeCodeText": "E-Mail",
+                    "RoleCode": "2",
+                    "RoleCodeText": "Successor",
+                    "ID": "280630",
+                    "BusinessSystemID": "",
+                    "ETag": "/Date(1767058607984)/",
+                    "UUID": "FA163E87-49F0-1FD0-B9A3-FFC686F6C480",
+                    "ItemUUID": null,
+                    "ItemTypeCode": "",
+                    "ItemTypeCodeText": "",
+                    "ItemID": "",
+                    "ServiceRequest": {
+                        "__deferred": {
+                            "uri": "https://my300375.c4c.saphybriscloud.cn/sap/c4c/odata/v1/c4codataapi/ServiceRequestBusinessTransactionDocumentReferenceCollection('FA163E8749F01FD0B9A3FFD247B62480')/ServiceRequest"
+                        }
+                    }
+                },
+                {
+                    "__metadata": {
+                        "uri": "https://my300375.c4c.saphybriscloud.cn/sap/c4c/odata/v1/c4codataapi/ServiceRequestBusinessTransactionDocumentReferenceCollection('FA163EB2BF9C1FD0B9A383EA283ABD78')",
+                        "type": "c4codata.ServiceRequestBusinessTransactionDocumentReference",
+                        "etag": "W/\"datetimeoffset'2025-12-30T01%3A36%3A47.9842130Z'\""
+                    },
+                    "ObjectID": "FA163EB2BF9C1FD0B9A383EA283ABD78",
+                    "ParentObjectID": "FA163EB2BF9C1FD0B9A3752B04D39D74",
+                    "TypeCode": "39",
+                    "TypeCodeText": "E-Mail",
+                    "RoleCode": "2",
+                    "RoleCodeText": "Successor",
+                    "ID": "280539",
+                    "BusinessSystemID": "",
+                    "ETag": "/Date(1767058607984)/",
+                    "UUID": "FA163EB2-BF9C-1FD0-B9A3-83EA28395D78",
+                    "ItemUUID": null,
+                    "ItemTypeCode": "",
+                    "ItemTypeCodeText": "",
+                    "ItemID": "",
+                    "ServiceRequest": {
+                        "__deferred": {
+                            "uri": "https://my300375.c4c.saphybriscloud.cn/sap/c4c/odata/v1/c4codataapi/ServiceRequestBusinessTransactionDocumentReferenceCollection('FA163EB2BF9C1FD0B9A383EA283ABD78')/ServiceRequest"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "activities": [
+        {
+            "d": {
+                "results": []
+            }
+        },
+        {
+            "d": {
+                "results": []
+            }
+        }
+    ]
+}
