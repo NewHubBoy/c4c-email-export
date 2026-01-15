@@ -8,7 +8,7 @@ type ResultState = {
   error?: string;
 };
 
-const apiBase = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:4000";
+const apiBase = process.env.NEXT_PUBLIC_API_BASE || "";
 
 type EmailNote = {
   html: string;

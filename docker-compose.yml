@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  c4c-tooling:
+    build: .
+    ports:
+      - "3000:3000"
+      - "4000:4000"
+    environment:
+      API_PROXY_TARGET: "http://localhost:4000"
+      C4C_TENANT_URL: "https://your-tenant"
+      C4C_USERNAME: "your-username"
+      C4C_PASSWORD: "your-password"

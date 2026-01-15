@@ -15,6 +15,7 @@ RUN npm run build --workspace apps/web
 FROM node:20-slim AS runner
 WORKDIR /app
 ENV NODE_ENV=production
+ENV API_PROXY_TARGET=http://localhost:4000
 
 COPY --from=deps /app/node_modules ./node_modules
 COPY package.json package-lock.json ./
