@@ -49,4 +49,14 @@ export class C4cController {
       body.password
     );
   }
+
+  @Post("email-notes-collection")
+  getEmailNotesCollection(@Body() body: C4cBaseRequest) {
+    return this.c4cService.getEmailNotesCollection(
+      body.tenantUrl,
+      body.ticketId,
+      body.username,
+      body.password
+    );
+  }
 }

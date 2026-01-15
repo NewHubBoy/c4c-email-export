@@ -218,7 +218,7 @@ export class C4cService {
       tenantUrl,
       "/sap/c4c/odata/v1/c4codataapi/ServiceRequestBusinessTransactionDocumentReferenceCollection",
       {
-        $filter: `ParentObjectID eq '${this.escapeOdataString(objectId)}'`,
+        $filter: `ParentObjectID eq '${this.escapeOdataString(objectId)}' and TypeCode eq '39'`,
         $format: "json"
       },
       authHeader
@@ -246,6 +246,115 @@ export class C4cService {
       objectId,
       references,
       emailNotes
+    };
+  }
+
+  async getEmailNotesCollection(
+    tenantUrl: string | undefined,
+    ticketId: string,
+    username?: string,
+    password?: string
+  ) {
+    const authHeader = this.buildAuthHeader(username, password);
+    const objectId = await this.getServiceRequestObjectId(
+      tenantUrl,
+      ticketId,
+      authHeader
+    );
+
+    const references = await this.request<
+      ODataCollection<{
+        ID?: string;
+        TypeCode?: string;
+        TypeCodeText?: string;
+      }>
+    >(
+      tenantUrl,
+      "/sap/c4c/odata/v1/c4codataapi/ServiceRequestBusinessTransactionDocumentReferenceCollection",
+      {
+        $filter: `ParentObjectID eq '${this.escapeOdataString(objectId)}' and TypeCode eq '39'`,
+        $format: "json"
+      },
+      authHeader
+    );
+
+    const referenceResults = references?.d?.results || [];
+    const emailRequests = referenceResults
+      .map((reference) => ({
+        id: typeof reference?.ID === "string" ? reference.ID : null,
+        typeCode:
+          typeof reference?.TypeCode === "string"
+            ? reference.TypeCode
+            : null,
+        typeCodeText:
+          typeof reference?.TypeCodeText === "string"
+            ? reference.TypeCodeText
+            : null
+      }))
+      .filter((reference): reference is {
+        id: string;
+        typeCode: string | null;
+        typeCodeText: string | null;
+      } => Boolean(reference.id));
+
+    if (emailRequests.length === 0) {
+      return {
+        objectId,
+        references,
+        emailNotes: [],
+        failures: []
+      };
+    }
+
+    const results = await Promise.allSettled(
+      emailRequests.map((reference) =>
+        this.request(
+          tenantUrl,
+          "/sap/c4c/odata/v1/c4codataapi/EMailCollection",
+          {
+            $filter: `ID eq '${this.escapeOdataString(reference.id)}'`,
+            $expand: "EMailNotes",
+            $format: "json"
+          },
+          authHeader
+        )
+      )
+    );
+
+    const emailNotes: Array<{
+      id: string;
+      typeCode: string | null;
+      typeCodeText: string | null;
+      data: unknown;
+    }> = [];
+    const failures: Array<{ id: string; error: string }> = [];
+
+    results.forEach((result, index) => {
+      const reference = emailRequests[index];
+      if (result.status === "fulfilled") {
+        emailNotes.push({
+          id: reference.id,
+          typeCode: reference.typeCode,
+          typeCodeText: reference.typeCodeText,
+          data: result.value
+        });
+        return;
+      }
+      const errorMessage =
+        result.reason instanceof Error
+          ? result.reason.message
+          : "Request failed.";
+      failures.push({
+        id: reference.id,
+        error: errorMessage
+      });
+    });
+
+    return {
+      objectId,
+      references,
+      emailNotes,
+      failures
     };
   }
 }
